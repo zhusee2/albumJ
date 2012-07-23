@@ -16,7 +16,6 @@ body {
 }
 
 #container,
-#content,
 .article,
 .article a,
 .article img {
@@ -26,7 +25,7 @@ body {
 
 #container {
   height: 100%;
-  padding: 3em 0 6em;
+  padding: 3em 0 4.5em;
 }
 
 #header {
