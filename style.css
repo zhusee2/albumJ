@@ -84,13 +84,14 @@ body {
   border-right: none;
 }
 .article a {
-  box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
   display: block;
 }
 .article img {
   max-width: 100%;
   max-height: 100%;
+  min-height: 320px;
   padding: 1.5em;
+  box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
   display: block;
 }
 .article .meta {
