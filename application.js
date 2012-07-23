@@ -3,6 +3,6 @@ window.addEventListener('resize', function(event) {
   document.querySelector('#content').setAttribute('style', 'display: none;');
   setTimeout(function() {
     document.querySelector('#content').removeAttribute('style');
-    window.scrollTo(currentScroll.x, currentScroll.y)
+    if (currentScroll.x != 0) window.scrollTo(currentScroll.x, currentScroll.y)
   }, 0);
 });
