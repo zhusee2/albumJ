@@ -6,3 +6,4 @@ window.addEventListener('resize', function(event) {
     if (currentScroll.x != 0) window.scrollTo(currentScroll.x, currentScroll.y)
   }, 0);
 });
+

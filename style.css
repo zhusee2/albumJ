@@ -20,8 +20,8 @@ body {
 .article,
 .article a,
 .article img {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 #container {
@@ -84,6 +84,9 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+.firefox .article {
+  border-right: none;
+}
 .article:last-child {
   border-right: none;
 }
@@ -97,6 +100,9 @@ body {
   padding: 1.5em;
   box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
   display: block;
+}
+.firefox .article img {
+  max-height: 600px;
 }
 .article .meta {
   max-width: 55%;
