@@ -87,15 +87,15 @@ body {
 
 .post {
   max-width: 100%;
+  max-height: 100%;
   margin-right: -0.3em;
-  padding: 0 3em;
+  padding: 3em;
   position: relative;
   display: inline-block;
   vertical-align: middle;
 }
 .post a {
   height: 100%;
-  padding: 3em 0;
   text-align: center;
   display: block;
 }
