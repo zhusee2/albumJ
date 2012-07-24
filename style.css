@@ -108,6 +108,10 @@ body {
 .post.explicit {
   height: 100%;
 }
+.post.explicit a {
+  display: inline;
+  padding: 0;
+}
 
 .post .meta {
   max-width: 60%;
