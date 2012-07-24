@@ -15,31 +15,25 @@ body {
   font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, Geneva, HiraginoSans, "Microsoft Jhenghei", sans-serif;
 }
 
-#container,
-#header,
-.article,
-.article a,
-.article img {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+#container {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-#container {
-  min-width: 600px;
+#header,
+.sidebar_placeholder {
+  width: 20%;
   height: 100%;
-  padding: 3em 0 4.5em;
+  min-width: 130px;
+  max-width: 240px;
 }
 
 #header {
-  width: 20%;
-  min-width: 130px;
-  max-width: 240px;
-  height: 100%;
   background: rgba(250, 250, 250, .9);
   color: #3AA2EB;
   text-align: right;
   box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
-  padding: 1.5em;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,8 +42,10 @@ body {
 #header h1 {
   font: 180%/1.666 Satisfy, cursive;
   text-transform: lowercase;
-  margin: 0.8333333em 0;
+  margin: 1.666667em 0.8333333em 0.8333333em 0;
 }
+
+/* @group Global Nav */
 #header a {
   color: #777;
   text-decoration: none;
@@ -57,6 +53,9 @@ body {
 }
 #header a:hover {
   text-decoration: underline;
+}
+#header ul.global_nav {
+  margin-right: 1.5em;
 }
 #header ul.global_nav li {
   font-size: 120%;
@@ -68,55 +67,58 @@ body {
   line-height: 1.5;
   text-transform: none;
 }
+/* @end */
 
-#content {
-  width: 80%;
-  height: 100%;
-  margin-left: 20%;
-  position: relative;
-  white-space: nowrap;
+.sidebar_placeholder, #content {
+  float: left;
 }
 
-.article {
-  padding: 0 3em;
-  border-right: 1px solid #feca00;
+#content {
+  width: 75%;
+  height: 100%;
+  white-space: nowrap;
+  border: 1px solid green;
+}
+
+.post {
+  max-width: 90%;
+  margin-right: -0.3em;
+  padding: 0 5%;
   position: relative;
+  border: 1px solid orange;
   display: inline-block;
   vertical-align: middle;
 }
-.firefox .article {
-  border-right: none;
-}
-.article:last-child {
-  border-right: none;
-}
-.article a {
+.post a {
+  height: 100%;
+  text-align: center;
   display: block;
+  border: 1px solid aqua;
 }
-.article img {
+.post img {
   max-width: 100%;
   max-height: 100%;
-  min-height: 320px;
-  padding: 1.5em;
   box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
-  display: block;
+  padding: 3%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .firefox .article img {
   max-height: 600px;
 }
-.article .meta {
-  max-width: 55%;
+
+.post .meta {
+  max-width: 60%;
   background: rgba(58, 162, 235, 0.75);
   color: #eeeeee;
-  /*border: 1px solid #1480cb;*/
-  /*border: 1px solid rgba(255,255,255,.5);*/
   box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
   text-shadow: 0 -1px 1px #999;
   padding: 0.75em 1.5em;
+  white-space: normal;
   position: absolute;
-  left: 1.5em;
-  bottom: 5%;
+  left: 2.5%;
+  bottom: 10%;
 }
-.article .meta h3 {
+.post .meta h3 {
   color: #fefefe;
 }
