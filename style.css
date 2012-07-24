@@ -74,16 +74,22 @@ body {
 }
 
 #content {
-  width: 75%;
+  width: 80%;
   height: 100%;
   white-space: nowrap;
   border: 1px solid green;
 }
 
+#content,
+.post, .post a, .post img {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 .post {
-  max-width: 90%;
+  max-width: 100%;
   margin-right: -0.3em;
-  padding: 0 5%;
+  padding: 0 3%;
   position: relative;
   border: 1px solid orange;
   display: inline-block;
@@ -91,6 +97,7 @@ body {
 }
 .post a {
   height: 100%;
+  padding: 5% 0;
   text-align: center;
   display: block;
   border: 1px solid aqua;
@@ -99,9 +106,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
-  padding: 3%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  padding: 1.5em;
 }
 .post.explicit {
   height: 100%;
