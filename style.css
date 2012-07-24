@@ -103,8 +103,8 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-.firefox .article img {
-  max-height: 600px;
+.post.explicit {
+  height: 100%;
 }
 
 .post .meta {
