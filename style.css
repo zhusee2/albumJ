@@ -77,7 +77,6 @@ body {
   width: 80%;
   height: 100%;
   white-space: nowrap;
-  border: 1px solid green;
 }
 
 #content,
@@ -91,7 +90,6 @@ body {
   margin-right: -0.3em;
   padding: 0 3%;
   position: relative;
-  border: 1px solid orange;
   display: inline-block;
   vertical-align: middle;
 }
@@ -100,7 +98,6 @@ body {
   padding: 5% 0;
   text-align: center;
   display: block;
-  border: 1px solid aqua;
 }
 .post img {
   max-width: 100%;
