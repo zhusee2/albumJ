@@ -3,23 +3,24 @@ window.addEventListener('load', foreceRedraw);
 
 function foreceRedraw() {
   var currentScroll = {x: window.scrollX, y: window.scrollY};
-  document.querySelector('#content').setAttribute('style', 'display: none;');
+  $('#content').attr('style', 'display: none;');
+  
   setTimeout(function() {
+    // Make #content visible again so browser would redraw it.
     document.querySelector('#content').removeAttribute('style');
     if (currentScroll.x != 0) window.scrollTo(currentScroll.x, currentScroll.y)
     
-    var boxes = document.querySelectorAll('.post');
+    // Reset all anchor set with diemenstions
+    $('.post a[style]').removeAttr('style');
     
-    for (var i = 0; i < boxes.length; i++) {
-      var anchor = boxes[i].querySelector('a');
-      
-      if (anchor.offsetHeight > boxes[i].offsetHeight) {
-        var img = anchor.querySelector('img'),
-            newHeight = boxes[i].offsetHeight,
-            newWidth = newHeight * img.offsetWidth / img.offsetHeight;
-        
-        anchor.setAttribute('style', 'width: ' + newWidth + 'px; height: ' + newHeight + 'px;');
+    // Find anchors with over-height images and then set explicit dimensions.
+    $('.post a').each(function(i, e) {
+      if ($(e).height() > $(e).parent().height()) {
+        var img = $(e).children('img'),
+            newHeight = $(e).parent().height(),
+            newWidth = newHeight * img.width() / img.height();
+        $(e).width(newWidth).height(newHeight);
       }
-    }
+    });
   }, 0);
 }
