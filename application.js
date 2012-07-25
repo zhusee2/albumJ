@@ -7,18 +7,19 @@ function foreceRedraw() {
   setTimeout(function() {
     document.querySelector('#content').removeAttribute('style');
     if (currentScroll.x != 0) window.scrollTo(currentScroll.x, currentScroll.y)
-  }, 0);
-}
-
-window.addEventListener('load', function(event) {
-  setTimeout(function() {
+    
     var boxes = document.querySelectorAll('.post');
     
     for (var i = 0; i < boxes.length; i++) {
-      var pic = boxes[i].querySelector('img'),
-          classString = boxes[i].getAttribute('class') + ' explicit';
+      var anchor = boxes[i].querySelector('a');
       
-      if (pic.offsetHeight > pic.offsetWidth) boxes[i].setAttribute('class', classString);
+      if (anchor.offsetHeight > boxes[i].offsetHeight) {
+        var img = anchor.querySelector('img'),
+            newHeight = boxes[i].offsetHeight,
+            newWidth = newHeight * img.offsetWidth / img.offsetHeight;
+        
+        anchor.setAttribute('style', 'width: ' + newWidth + 'px; height: ' + newHeight + 'px;');
+      }
     }
-  }, 50);
-});
+  }, 0);
+}
