@@ -72,9 +72,7 @@ body {
 .sidebar_placeholder {
   width: 20%;
   height: 100px;
-  border: 1px solid #333;
   display: inline-block;
-  box-sizing: border-box;
 }
 
 #content {
@@ -111,15 +109,6 @@ body {
   box-shadow: 0px 0.1em 0.3em rgba(0,0,0,.75);
   padding: 1.5em;
 }
-/*
-.post.explicit {
-  height: 100%;
-}
-.post.explicit a {
-  display: inline;
-  padding: 0;
-}
-*/
 
 .post .meta {
   max-width: 60%;
